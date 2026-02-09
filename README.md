@@ -147,3 +147,4 @@ El sitio es completamente responsive con breakpoints en:
 ## 📄 Licencia
 
 © 2026 Majotubeunaidea - Todos los derechos reservados
+.
