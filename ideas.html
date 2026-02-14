@@ -11,209 +11,19 @@
         content="Conocimiento técnico compartido: mejoras de procesos, técnicas de ensamblaje y buenas prácticas para el taller de carpintería de aluminio.">
     <meta name="keywords" content="mejoras proceso, técnicas ensamblaje, buenas prácticas carpintería, know-how taller">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap"
         rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/ideas.css">
     <link rel="stylesheet" href="css/print.css" media="print">
 
-    <style>
-        /* Ideas Page Specific Styles */
-        .ideas-hero {
-            padding: calc(var(--header-height) + var(--space-10)) 5% var(--space-10);
-            background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-dark) 100%);
-            text-align: center;
-        }
-
-        .ideas-hero__title {
-            margin-bottom: var(--space-4);
-        }
-
-        .ideas-hero__title span {
-            color: var(--color-success);
-        }
-
-        .ideas-hero__description {
-            font-size: var(--font-size-lg);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Ideas Grid */
-        .ideas-section {
-            padding: var(--space-10) 5%;
-            background: var(--bg-dark);
-        }
-
-        .ideas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-            gap: var(--space-6);
-            max-width: var(--container-2xl);
-            margin: 0 auto;
-        }
-
-        /* Idea Card */
-        .idea-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-default);
-            border-radius: var(--radius-xl);
-            padding: var(--space-6);
-            transition: var(--transition-spring);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .idea-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--border-strong);
-            transition: var(--transition-base);
-        }
-
-        .idea-card:hover {
-            background: var(--bg-card-hover);
-            transform: translateY(-4px);
-        }
-
-        .idea-card:hover::before {
-            background: var(--color-primary);
-        }
-
-        .idea-card--process::before {
-            background: var(--color-primary);
-        }
-
-        .idea-card--technique::before {
-            background: var(--color-accent);
-        }
-
-        .idea-card--tip::before {
-            background: var(--color-success);
-        }
-
-        .idea-card__header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: var(--space-4);
-        }
-
-        .idea-card__icon {
-            font-size: var(--font-size-3xl);
-        }
-
-        .idea-card__title {
-            font-size: var(--font-size-xl);
-            font-weight: var(--font-weight-bold);
-            margin-bottom: var(--space-3);
-            color: var(--text-primary);
-        }
-
-        .idea-card__description {
-            font-size: var(--font-size-sm);
-            color: var(--text-secondary);
-            line-height: var(--line-height-relaxed);
-            margin-bottom: var(--space-4);
-        }
-
-        .idea-card__tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-2);
-        }
-
-        .idea-card__tag {
-            font-size: var(--font-size-xs);
-            padding: var(--space-1) var(--space-3);
-            background: var(--bg-surface);
-            border-radius: var(--radius-full);
-            color: var(--text-muted);
-        }
-
-        /* Categories Section */
-        .categories-bar {
-            display: flex;
-            justify-content: center;
-            gap: var(--space-4);
-            padding: var(--space-6) 5%;
-            border-bottom: 1px solid var(--border-subtle);
-            flex-wrap: wrap;
-        }
-
-        .category-item {
-            display: flex;
-            align-items: center;
-            gap: var(--space-2);
-            font-size: var(--font-size-sm);
-            color: var(--text-secondary);
-        }
-
-        .category-item__dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-
-        .category-item__dot--process {
-            background: var(--color-primary);
-        }
-
-        .category-item__dot--technique {
-            background: var(--color-accent);
-        }
-
-        .category-item__dot--tip {
-            background: var(--color-success);
-        }
-
-        /* Call to Action */
-        .ideas-cta {
-            padding: var(--space-16) 5%;
-            background: var(--bg-surface);
-            text-align: center;
-        }
-
-        .ideas-cta__box {
-            background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated));
-            border: 1px solid var(--border-default);
-            border-radius: var(--radius-2xl);
-            padding: var(--space-10);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .ideas-cta__title {
-            margin-bottom: var(--space-4);
-        }
-
-        .ideas-cta__description {
-            font-size: var(--font-size-lg);
-            color: var(--text-secondary);
-            margin-bottom: var(--space-6);
-        }
-
-        @media (max-width: 768px) {
-            .ideas-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .categories-bar {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -229,7 +39,7 @@
             <a href="pro2000.html" class="nav__link">PRO-2000 MAXIMA</a>
             <a href="inventos.html" class="nav__link">Inventos</a>
             <a href="ideas.html" class="nav__link active">Ideas</a>
-            <a href="index.html#descargas" class="nav__link">Descargas</a>
+            <a href="index.html#acceso" class="nav__link">Acceso</a>
         </nav>
 
         <button class="nav-toggle" id="nav-toggle" aria-label="Menú de navegación">
@@ -254,15 +64,23 @@
         <div class="categories-bar">
             <div class="category-item">
                 <span class="category-item__dot category-item__dot--process"></span>
-                <span>Mejora de Proceso</span>
+                <span>Proceso</span>
             </div>
             <div class="category-item">
                 <span class="category-item__dot category-item__dot--technique"></span>
-                <span>Técnica de Ensamblaje</span>
+                <span>Ensamblaje</span>
             </div>
             <div class="category-item">
                 <span class="category-item__dot category-item__dot--tip"></span>
-                <span>Consejo / Tip</span>
+                <span>Tip Rápido</span>
+            </div>
+            <div class="category-item">
+                <span class="category-item__dot category-item__dot--sales"></span>
+                <span>Comercial</span>
+            </div>
+            <div class="category-item">
+                <span class="category-item__dot category-item__dot--office"></span>
+                <span>Administración</span>
             </div>
         </div>
 

@@ -14,7 +14,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap"
         rel="stylesheet">
 
     <!-- Styles -->
@@ -39,7 +40,7 @@
             <a href="pro2000.html" class="nav__link">PRO-2000 MAXIMA</a>
             <a href="inventos.html" class="nav__link active">Inventos</a>
             <a href="ideas.html" class="nav__link">Ideas</a>
-            <a href="index.html#descargas" class="nav__link">Descargas</a>
+            <a href="index.html#acceso" class="nav__link">Acceso</a>
         </nav>
 
         <button class="nav-toggle" id="nav-toggle" aria-label="Menú de navegación">
@@ -58,7 +59,7 @@
             <h1 class="inventos-hero__title">Inventos y <span>Adaptaciones</span></h1>
             <p class="inventos-hero__description">
                 Soluciones creativas nacidas en el taller. Cada proyecto incluye ficha técnica
-                con materiales, dificultad y archivos descargables.
+                con materiales, dificultad y documentación técnica exclusiva.
             </p>
         </section>
 
@@ -69,6 +70,9 @@
             <button class="filter-btn" data-filter="herramienta">Herramientas</button>
             <button class="filter-btn" data-filter="organizacion">Organización</button>
             <button class="filter-btn" data-filter="automatizacion">Automatización</button>
+            <button class="filter-btn" data-filter="seguridad">Seguridad</button>
+            <button class="filter-btn" data-filter="oficina">Digitalización</button>
+            <button class="filter-btn" data-filter="mantenimiento">Mantenimiento</button>
         </div>
 
         <!-- Inventos Grid -->
@@ -131,7 +135,7 @@
                         </div>
                     </div>
                     <div class="invento-card__actions">
-                        <a href="#" class="btn btn--sm btn--secondary" title="Descargar planos">📄</a>
+                        <a href="#" class="btn btn--sm btn--secondary" title="Ver documentación">📄</a>
                     </div>
                 </div>
             </article>
@@ -192,7 +196,7 @@
                         </div>
                     </div>
                     <div class="invento-card__actions">
-                        <a href="#" class="btn btn--sm btn--secondary" title="Descargar planos">📄</a>
+                        <a href="#" class="btn btn--sm btn--secondary" title="Ver documentación">📄</a>
                     </div>
                 </div>
             </article>
@@ -253,7 +257,7 @@
                         </div>
                     </div>
                     <div class="invento-card__actions">
-                        <a href="#" class="btn btn--sm btn--secondary" title="Descargar planos">📄</a>
+                        <a href="#" class="btn btn--sm btn--secondary" title="Ver documentación">📄</a>
                     </div>
                 </div>
             </article>
@@ -314,7 +318,7 @@
                         </div>
                     </div>
                     <div class="invento-card__actions">
-                        <a href="#" class="btn btn--sm btn--secondary" title="Descargar planos">📄</a>
+                        <a href="#" class="btn btn--sm btn--secondary" title="Ver documentación">📄</a>
                     </div>
                 </div>
             </article>
@@ -375,7 +379,7 @@
                         </div>
                     </div>
                     <div class="invento-card__actions">
-                        <a href="#" class="btn btn--sm btn--secondary" title="Descargar planos">📄</a>
+                        <a href="#" class="btn btn--sm btn--secondary" title="Ver documentación">📄</a>
                     </div>
                 </div>
             </article>
@@ -437,11 +441,95 @@
                         </div>
                     </div>
                     <div class="invento-card__actions">
-                        <a href="#" class="btn btn--sm btn--secondary" title="Descargar documentación">📄</a>
+                        <a href="#" class="btn btn--sm btn--secondary" title="Ver documentación">📄</a>
                     </div>
                 </div>
             </article>
 
+            <!-- Invento 7: Seguridad -->
+            <article class="invento-card" data-category="seguridad">
+                <div class="invento-card__media">
+                    <img src="assets/OIG1.XlpYJ3QHQaaD (1).jpg" alt="Protección para Tronzadora"
+                        class="invento-card__image" data-zoomable>
+                    <span class="badge badge--error invento-card__category">Seguridad</span>
+                    <div class="invento-card__overlay">
+                        <a href="#" class="btn btn--primary btn--sm">Ver Medidas</a>
+                    </div>
+                </div>
+                <div class="invento-card__body">
+                    <h3 class="invento-card__title">Protector Acrílico para Tronzadora</h3>
+                    <p class="invento-card__description">
+                        Pantalla abatible transparente con sensor magnético de parada automática.
+                        Protección total contra proyecciones de viruta sin perder visibilidad.
+                    </p>
+                    <div class="invento-card__meta">
+                        <div class="meta-item">
+                            <span class="meta-item__label">Certificación</span>
+                            <span class="meta-item__value">CE Adapt.</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-item__label">Coste Est.</span>
+                            <span class="meta-item__value">~45€</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Invento 8: Digitalización -->
+            <article class="invento-card" data-category="oficina">
+                <div class="invento-card__media">
+                    <img src="IMAGENES/DESIGNER.png" alt="Terminal de Taller" class="invento-card__image" data-zoomable>
+                    <span class="badge badge--info invento-card__category">Digitalización</span>
+                    <div class="invento-card__overlay">
+                        <a href="#" class="btn btn--primary btn--sm">Configurar</a>
+                    </div>
+                </div>
+                <div class="invento-card__body">
+                    <h3 class="invento-card__title">Terminal Industrial Low-Cost</h3>
+                    <p class="invento-card__description">
+                        Estación de consulta de planos y partes de taller usando una Raspberry Pi
+                        y monitor reciclado. Conexión directa con PRO-2000.
+                    </p>
+                    <div class="invento-card__meta">
+                        <div class="meta-item">
+                            <span class="meta-item__label">Hardware</span>
+                            <span class="meta-item__value">RPi 4</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-item__label">Software</span>
+                            <span class="meta-item__value">Linux OS</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Invento 9: Mantenimiento -->
+            <article class="invento-card" data-category="mantenimiento">
+                <div class="invento-card__media">
+                    <img src="assets/OIG3.jpg" alt="Grasa Específica" class="invento-card__image" data-zoomable>
+                    <span class="badge badge--warning invento-card__category">Mantenimiento</span>
+                    <div class="invento-card__overlay">
+                        <a href="#" class="btn btn--primary btn--sm">Plan Anual</a>
+                    </div>
+                </div>
+                <div class="invento-card__body">
+                    <h3 class="invento-card__title">Sistema de Lubricación Centralizada</h3>
+                    <p class="invento-card__description">
+                        Adaptación de conductos para engrase simultáneo de guías lineales
+                        y husillos en fresadoras CNC. Reduce el tiempo de parada un 70%.
+                    </p>
+                    <div class="invento-card__meta">
+                        <div class="meta-item">
+                            <span class="meta-item__label">Reducción Falla</span>
+                            <span class="meta-item__value">40%</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-item__label">Tiempo</span>
+                            <span class="meta-item__value">4 horas</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
 
